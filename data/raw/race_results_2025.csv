@@ -1,0 +1,101 @@
+Track,Position,No,Driver,Team,Starting Grid,Laps,Time/Retired,Points,Set Fastest Lap,Fastest Lap Time
+Australia,1,4,Lando Norris,McLaren Mercedes,1,57,1:42:06.304,25,Yes,1:22.167
+Australia,2,1,Max Verstappen,Red Bull Racing Honda RBPT,3,57,+0.895,18,No,1:23.081
+Australia,3,63,George Russell,Mercedes,4,57,+8.481,15,No,1:25.065
+Australia,4,12,Kimi Antonelli,Mercedes,16,57,+10.135,12,No,1:24.901
+Australia,5,23,Alexander Albon,Williams Mercedes,6,57,+12.773,10,No,1:24.597
+Australia,6,18,Lance Stroll,Aston Martin Aramco Mercedes,13,57,+17.413,8,No,1:25.538
+Australia,7,27,Nico Hulkenberg,Kick Sauber Ferrari,17,57,+18.423,6,No,1:25.243
+Australia,8,16,Charles Leclerc,Ferrari,7,57,+19.826,4,No,1:25.271
+Australia,9,81,Oscar Piastri,McLaren Mercedes,2,57,+20.448,2,No,1:23.242
+Australia,10,44,Lewis Hamilton,Ferrari,8,57,+22.473,1,No,1:24.218
+Australia,11,10,Pierre Gasly,Alpine Renault,9,57,+26.502,0,No,1:25.020
+Australia,12,22,Yuki Tsunoda,Racing Bulls Honda RBPT,5,57,+29.884,0,No,1:24.194
+Australia,13,31,Esteban Ocon,Haas Ferrari,19,57,+33.161,0,No,1:26.764
+Australia,14,87,Oliver Bearman,Haas Ferrari,20,57,+40.351,0,No,1:27.603
+Australia,NC,30,Liam Lawson,Red Bull Racing Honda RBPT,18,46,DNF,0,No,1:22.970
+Australia,NC,5,Gabriel Bortoleto,Kick Sauber Ferrari,15,45,DNF,0,No,1:24.192
+Australia,NC,14,Fernando Alonso,Aston Martin Aramco Mercedes,12,32,DNF,0,No,1:28.819
+Australia,NC,55,Carlos Sainz,Williams Mercedes,10,0,DNF,0,No,
+Australia,NC,7,Jack Doohan,Alpine Renault,14,0,DNF,0,No,
+Australia,NC,6,Isack Hadjar,Racing Bulls Honda RBPT,11,0,DNF,0,No,
+China,1,81,Oscar Piastri,McLaren Mercedes,1,56,1:30:55.026,25,No,1:35.520
+China,2,4,Lando Norris,McLaren Mercedes,3,56,+9.748,18,No,1:35.454
+China,3,63,George Russell,Mercedes,2,56,+11.097,15,No,1:35.816
+China,4,1,Max Verstappen,Red Bull Racing Honda RBPT,4,56,+16.656,12,No,1:35.488
+China,5,31,Esteban Ocon,Haas Ferrari,11,56,+49.969,10,No,1:35.740
+China,6,12,Kimi Antonelli,Mercedes,8,56,+53.748,8,No,1:36.046
+China,7,23,Alexander Albon,Williams Mercedes,10,56,+56.321,6,No,1:36.254
+China,8,87,Oliver Bearman,Haas Ferrari,17,56,+61.303,4,No,1:36.363
+China,9,18,Lance Stroll,Aston Martin Aramco Mercedes,14,56,+70.204,2,No,1:36.044
+China,10,55,Carlos Sainz,Williams Mercedes,15,56,+76.387,1,No,1:36.779
+China,11,6,Isack Hadjar,Racing Bulls Honda RBPT,7,56,+78.875,0,No,1:35.868
+China,12,30,Liam Lawson,Red Bull Racing Honda RBPT,20,56,+81.147,0,No,1:35.985
+China,13,7,Jack Doohan,Alpine Renault,18,56,+88.401,0,No,1:36.424
+China,14,5,Gabriel Bortoleto,Kick Sauber Ferrari,19,55,+1 lap,0,No,1:35.874
+China,15,27,Nico Hulkenberg,Kick Sauber Ferrari,12,55,+1 lap,0,No,1:37.275
+China,16,22,Yuki Tsunoda,Racing Bulls Honda RBPT,9,55,+1 lap,0,No,1:35.871
+China,NC,14,Fernando Alonso,Aston Martin Aramco Mercedes,13,4,DNF,0,No,1:39.256
+China,DQ,16,Charles Leclerc,Ferrari,6,0,DSQ,0,No,1:36.157
+China,DQ,44,Lewis Hamilton,Ferrari,5,0,DSQ,0,Yes,1:35.069
+China,DQ,10,Pierre Gasly,Alpine Renault,16,0,DSQ,0,No,1:36.425
+Japan,1,1,Max Verstappen,Red Bull Racing Honda RBPT,1,53,1:22:06.983,25,No,1:31.041
+Japan,2,4,Lando Norris,McLaren Mercedes,2,53,+1.423,18,No,1:31.116
+Japan,3,81,Oscar Piastri,McLaren Mercedes,3,53,+2.129,15,No,1:31.039
+Japan,4,16,Charles Leclerc,Ferrari,4,53,+16.097,12,No,1:31.469
+Japan,5,63,George Russell,Mercedes,5,53,+17.362,10,No,1:31.357
+Japan,6,12,Kimi Antonelli,Mercedes,6,53,+18.671,8,Yes,1:30.965
+Japan,7,44,Lewis Hamilton,Ferrari,8,53,+29.182,6,No,1:31.406
+Japan,8,6,Isack Hadjar,Racing Bulls Honda RBPT,7,53,+37.134,4,No,1:31.317
+Japan,9,23,Alexander Albon,Williams Mercedes,9,53,+40.367,2,No,1:31.125
+Japan,10,87,Oliver Bearman,Haas Ferrari,10,53,+54.529,1,No,1:32.006
+Japan,11,14,Fernando Alonso,Aston Martin Aramco Mercedes,12,53,+57.333,0,No,1:31.770
+Japan,12,22,Yuki Tsunoda,Red Bull Racing Honda RBPT,14,53,+58.401,0,No,1:31.871
+Japan,13,10,Pierre Gasly,Alpine Renault,11,53,+62.122,0,No,1:31.820
+Japan,14,55,Carlos Sainz,Williams Mercedes,15,53,+74.129,0,No,1:31.106
+Japan,15,7,Jack Doohan,Alpine Renault,19,53,+81.314,0,No,1:32.685
+Japan,16,27,Nico Hulkenberg,Kick Sauber Ferrari,16,53,+81.957,0,No,1:32.572
+Japan,17,30,Liam Lawson,Racing Bulls Honda RBPT,13,53,+82.734,0,No,1:32.043
+Japan,18,31,Esteban Ocon,Haas Ferrari,18,53,+83.438,0,No,1:31.967
+Japan,19,5,Gabriel Bortoleto,Kick Sauber Ferrari,17,53,+83.897,0,No,1:32.034
+Japan,20,18,Lance Stroll,Aston Martin Aramco Mercedes,20,52,+1 lap,0,No,1:32.052
+Bahrain,1,81,Oscar Piastri,McLaren Mercedes,1,57,1:35:39.435,25,Yes,1:35.140
+Bahrain,2,63,George Russell,Mercedes,3,57,+15.499,18,No,1:35.518
+Bahrain,3,4,Lando Norris,McLaren Mercedes,6,57,+16.273,15,No,1:35.728
+Bahrain,4,16,Charles Leclerc,Ferrari,2,57,+19.679,12,No,1:36.132
+Bahrain,5,44,Lewis Hamilton,Ferrari,9,57,+27.993,10,No,1:36.235
+Bahrain,6,1,Max Verstappen,Red Bull Racing Honda RBPT,7,57,+24.395,8,No,1:36.167
+Bahrain,7,10,Pierre Gasly,Alpine Renault,4,57,+36.002,6,No,1:36.531
+Bahrain,8,31,Esteban Ocon,Haas Ferrari,14,57,+44.244,4,No,1:37.098
+Bahrain,9,22,Yuki Tsunoda,Red Bull Racing Honda RBPT,10,57,+45.061,2,No,1:37.225
+Bahrain,10,87,Oliver Bearman,Haas Ferrari,20,57,+47.594,1,No,1:37.303
+Bahrain,11,12,Kimi Antonelli,Mercedes,5,57,+48.016,0,No,1:36.690
+Bahrain,12,23,Alexander Albon,Williams Mercedes,15,57,+48.839,0,No,1:37.141
+Bahrain,13,6,Isack Hadjar,Racing Bulls Honda RBPT,12,57,+56.314,0,No,1:36.952
+Bahrain,14,7,Jack Doohan,Alpine Renault,11,57,+57.806,0,No,1:36.682
+Bahrain,15,14,Fernando Alonso,Aston Martin Aramco Mercedes,13,57,+60.340,0,No,1:37.906
+Bahrain,16,30,Liam Lawson,Racing Bulls Honda RBPT,17,57,+64.435,0,No,1:37.380
+Bahrain,17,18,Lance Stroll,Aston Martin Aramco Mercedes,19,57,+65.489,0,No,1:38.064
+Bahrain,18,5,Gabriel Bortoleto,Kick Sauber Ferrari,18,57,+66.872,0,No,1:38.006
+Bahrain,NC,55,Carlos Sainz,Williams Mercedes,8,45,DNF,0,No,1:36.954
+Bahrain,DQ,27,Nico Hulkenberg,Kick Sauber Ferrari,16,0,DSQ,0,No,1:37.338
+Saudi Arabia,1,81,Oscar Piastri,McLaren Mercedes,2,50,1:21:06.758,25,No,1:32.228
+Saudi Arabia,2,1,Max Verstappen,Red Bull Racing Honda RBPT,1,50,+2.843,18,No,1:32.280
+Saudi Arabia,3,16,Charles Leclerc,Ferrari,4,50,+8.104,15,No,1:32.192
+Saudi Arabia,4,4,Lando Norris,McLaren Mercedes,10,50,+9.196,12,Yes,1:31.778
+Saudi Arabia,5,63,George Russell,Mercedes,3,50,+27.236,10,No,1:32.893
+Saudi Arabia,6,12,Kimi Antonelli,Mercedes,5,50,+34.688,8,No,1:32.396
+Saudi Arabia,7,44,Lewis Hamilton,Ferrari,7,50,+39.073,6,No,1:32.600
+Saudi Arabia,8,55,Carlos Sainz,Williams Mercedes,6,50,+64.630,4,No,1:32.466
+Saudi Arabia,9,23,Alexander Albon,Williams Mercedes,11,50,+66.515,2,No,1:33.477
+Saudi Arabia,10,6,Isack Hadjar,Racing Bulls Honda RBPT,14,50,+67.091,1,No,1:33.257
+Saudi Arabia,11,14,Fernando Alonso,Aston Martin Aramco Mercedes,13,50,+75.917,0,No,1:33.009
+Saudi Arabia,12,30,Liam Lawson,Racing Bulls Honda RBPT,12,50,+78.451,0,No,1:32.998
+Saudi Arabia,13,87,Oliver Bearman,Haas Ferrari,15,50,+79.194,0,No,1:33.238
+Saudi Arabia,14,31,Esteban Ocon,Haas Ferrari,19,50,+99.723,0,No,1:34.309
+Saudi Arabia,15,27,Nico Hulkenberg,Kick Sauber Ferrari,18,49,+1 lap,0,No,1:33.446
+Saudi Arabia,16,18,Lance Stroll,Aston Martin Aramco Mercedes,16,49,+1 lap,0,No,1:32.745
+Saudi Arabia,17,7,Jack Doohan,Alpine Renault,17,49,+1 lap,0,No,1:33.150
+Saudi Arabia,18,5,Gabriel Bortoleto,Kick Sauber Ferrari,20,49,+1 lap,0,No,1:34.447
+Saudi Arabia,NC,22,Yuki Tsunoda,Red Bull Racing Honda RBPT,8,1,DNF,0,No,
+Saudi Arabia,NC,10,Pierre Gasly,Alpine Renault,9,0,DNF,0,No,
