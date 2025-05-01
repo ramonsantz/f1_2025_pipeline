@@ -1,0 +1,7 @@
+pandas
+requests
+beautifulsoup4
+sqlalchemy
+psycopg2-binary  # apenas se usar PostgreSQL
+apache-airflow
+jupyter
