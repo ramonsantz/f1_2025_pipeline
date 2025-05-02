@@ -1,4 +1,5 @@
-import os
+# Data ingestion
+
 import pandas as pd
 
 url_csv = "https://raw.githubusercontent.com/toUpperCase78/formula1-datasets/refs/heads/master/Formula1_2025Season_RaceResults.csv"
