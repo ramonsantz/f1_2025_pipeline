@@ -1,4 +1,4 @@
-# Pipeline Automatizado de Dados da Temporada 2025 da Fórmula 1
+# Pipeline Automatizado para Dados - Temporada 2025 da Fórmula 1
 
 <p align="center"> 
   <img src="https://github.com/user-attachments/assets/6c9c24ac-46aa-469f-9ddc-a5d4cd1946af">
