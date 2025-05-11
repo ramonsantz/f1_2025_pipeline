@@ -39,7 +39,8 @@ for row in rows:
 columns = ['Grand Prix', 'Driver','Driver Abbreviation', 'Car', 'Time']
 df_fastest = pd.DataFrame(data, columns=columns)
 
-# Save the raw data
-df_fastest.to_csv('data/raw/fastest_laps_2025.csv', index=False)
 
-print(df_fastest)
+if __name__ == '__main__':
+    # Save the raw data
+    df_fastest.to_csv('data/raw/fastest_laps_2025.csv', index=False)
+    print(df_fastest)
