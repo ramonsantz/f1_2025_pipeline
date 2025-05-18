@@ -42,16 +42,13 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
    .venv\Scripts\activate  # Windows
    pip install -r requirements.txt
 
-   #Rodar Carga de Dados
+   #Executar atualização manualmente:
    python src/load_to_sqlite.py
 
    # Rodar Airflow
    airflow db init
    airflow webserver -p 8080
    airflow scheduler
-
-   #Executar atualização manualmente:
-   python src/load_to_sqlite.py
 
    #Visualizar dados com Streamlit
    streamlit run f1_app.py
