@@ -6,7 +6,7 @@
 
 Este projeto automatiza a ingestão, transformação e carga de dados da Temporada 2025 da Fórmula 1. Utilizando Airflow para orquestração, os dados são processados e armazenados em SQLite/PostgreSQL para análise.
 
-**Tecnologias**: Python, Airflow, SQLite/PostgreSQL, Web Scraping, SQL, Git, Pandas
+**Tecnologias**: Python, Airflow, SQLite/PostgreSQL, Web Scraping, SQL, Git, Pandas, Streamlit
 
 ---
 
@@ -18,6 +18,7 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
 - **`/sql`**: scripts SQL para criação de tabelas e consultas.
 - **`/notebooks`**: notebooks para análises exploratórias.
 - **`/docs`**: diagramas e prints do fluxo de dados.
+- **`/f1_dashboard`**: aplicação em Streamlit para visualização dos dados.
 
 ---
 
@@ -28,7 +29,7 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
 3. **Carga (ETL)**: Dados carregados em banco de dados (SQLite/PostgreSQL).
 4. **Orquestração com Airflow**: Automação de tarefas via DAGs.
 5. **Consultas**: Relatórios e rankings através de SQL (ex: voltas mais rápidas, desempenho de pilotos).
-6. **Visualização**: Opcional, para insights rápidos (ex: Power BI).
+6. **Visualização**: Dashboard com Streamlit para insights rápidos.
 
 ---
 
@@ -51,3 +52,6 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
 
    #Executar atualização manualmente:
    python src/load_to_sqlite.py
+
+   #Visualizar dados com Streamlit
+   streamlit run f1_app.py
