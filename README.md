@@ -43,7 +43,7 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
    pip install -r requirements.txt
 
    #Executar atualização manualmente:
-   python src/load_to_sqlite.py
+   python src/load_and_query_sqlite.py
 
    # Rodar Airflow
    airflow db init
