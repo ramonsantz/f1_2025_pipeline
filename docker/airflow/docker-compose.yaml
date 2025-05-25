@@ -1,41 +1,63 @@
 version: '3.8'
 
-x-airflow-common:
-  &airflow-common
-  image: apache/airflow:2.9.1
-  environment:
-    &airflow-env
-    AIRFLOW__CORE__EXECUTOR: LocalExecutor
-    AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
-    AIRFLOW__CORE__FERNET_KEY: ''
-    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
-    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-  volumes:
-    - ./docker/airflow:/opt/airflow/dags
-    - ./logs:/opt/airflow/logs
-    - ./plugins:/opt/airflow/plugins
-  depends_on:
-    - postgres
-
 services:
-  postgres:
-    image: postgres:13
+  airflow-init:
+    image: apache/airflow:2.8.1-python3.10
+    container_name: airflow-init
     environment:
-      POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
-      POSTGRES_DB: airflow
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
     volumes:
-      - postgres-db-volume:/var/lib/postgresql/data
+      - ../../dags:/opt/airflow/dags
+      - ../../src:/opt/airflow/src
+      - ../../data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./airflow_db:/opt/airflow
+    command: >
+      bash -c "
+      airflow db init &&
+      airflow users create --username ramon --password admin123 --firstname Admin --lastname User --role Admin --email admin@example.com
+      "
+    restart: "no"
 
   airflow-webserver:
-    <<: *airflow-common
+    image: apache/airflow:2.8.1-python3.10
+    container_name: airflow-webserver
+    restart: always
+    depends_on:
+      - airflow-init
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+    volumes:
+      - ../../dags:/opt/airflow/dags
+      - ../../src:/opt/airflow/src
+      - ../../data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./airflow_db:/opt/airflow
     ports:
       - "8080:8080"
-    command: webserver
+    working_dir: /opt/airflow
+    entrypoint: airflow webserver
 
   airflow-scheduler:
-    <<: *airflow-common
-    command: scheduler
-
-volumes:
-  postgres-db-volume:
+    image: apache/airflow:2.8.1-python3.10
+    container_name: airflow-scheduler
+    restart: always
+    depends_on:
+      - airflow-webserver
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
+    volumes:
+      - ../../dags:/opt/airflow/dags
+      - ../../src:/opt/airflow/src
+      - ../../data:/opt/airflow/data
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./airflow_db:/opt/airflow
+    working_dir: /opt/airflow
+    command: airflow scheduler

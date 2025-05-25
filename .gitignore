@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.venv/
+env/
+venv/
+# VSCode
+.vscode/
+# Logs
+logs/
+*.log
+# Airflow
+airflow.db
+airflow.cfg
+airflow.sqlite
+# Arquivos temporários
+*.swp
+.DS_Store
