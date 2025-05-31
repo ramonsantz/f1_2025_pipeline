@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   airflow-init:
-    image: apache/airflow:2.8.1-python3.10
+    build: .
     container_name: airflow-init
     environment:
       AIRFLOW__CORE__EXECUTOR: SequentialExecutor
@@ -22,7 +22,7 @@ services:
     restart: "no"
 
   airflow-webserver:
-    image: apache/airflow:2.8.1-python3.10
+    build: .
     container_name: airflow-webserver
     restart: always
     depends_on:
@@ -44,7 +44,7 @@ services:
     entrypoint: airflow webserver
 
   airflow-scheduler:
-    image: apache/airflow:2.8.1-python3.10
+    build: .
     container_name: airflow-scheduler
     restart: always
     depends_on:
