@@ -11,6 +11,7 @@ services:
       - ../../dags:/opt/airflow/dags
       - ../../src:/opt/airflow/src
       - ../../data:/opt/airflow/data
+      - ../../notebook:/opt/airflow/notebook
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./airflow_db:/opt/airflow
@@ -35,6 +36,7 @@ services:
       - ../../dags:/opt/airflow/dags
       - ../../src:/opt/airflow/src
       - ../../data:/opt/airflow/data
+      - ../../notebook:/opt/airflow/notebook
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./airflow_db:/opt/airflow
@@ -56,6 +58,7 @@ services:
       - ../../dags:/opt/airflow/dags
       - ../../src:/opt/airflow/src
       - ../../data:/opt/airflow/data
+      - ../../notebook:/opt/airflow/notebook
       - ./logs:/opt/airflow/logs
       - ./plugins:/opt/airflow/plugins
       - ./airflow_db:/opt/airflow
