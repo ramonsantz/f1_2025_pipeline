@@ -45,13 +45,16 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
    python src/ingest_race_results.py
    python src/scrape_fastest_laps.py
 
-   # Rodar Airflow
-   airflow db init
-   airflow webserver -p 8080
-   airflow scheduler
-
-   #Executar consultas SQL manualmente:
+   # Executar consultas SQL manualmente:
    python src/load_and_query_sqlite.py
 
+   #  Utilizando o Apache Airflow com Docker + Docker Compose
+   
+    # Subir os containers do Airflow com Docker Compose
+    docker compose -f docker/airflow/docker-compose.yaml up -d
+
+    # Parar os containers do Airflow
+    docker compose -f docker/airflow/docker-compose.yaml down
+
    #Visualizar dados com Streamlit
-   streamlit run f1_app.py
+   python -m streamlit run f1_dashboard/f1_app.py
