@@ -10,7 +10,7 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
 
 <p align="center"> 
   <img src="https://github.com/user-attachments/assets/764200e5-0e5c-4db1-a5c2-7eda1581333f">
-  <img src="https://github.com/user-attachments/assets/3a102ebd-eba1-499a-87e0-a210ad5e2de2">
+  <img src="https://github.com/user-attachments/assets/3bd107cb-b209-401a-bf9f-f177ebd19793">
 </p>
 
 ---
