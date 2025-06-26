@@ -9,7 +9,7 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
 📊 Um dashboard interativo com **Streamlit + Plotly** apresenta insights visuais dos resultados das corridas e voltas mais rápidas, disponível apenas ao rodar projeto localmente.
 
 <p align="center"> 
-  <img src="https://github.com/user-attachments/assets/764200e5-0e5c-4db1-a5c2-7eda1581333f">
+  <img src="https://github.com/user-attachments/assets/809d4f9f-e4e9-4083-830e-5d561a60af39">
   <img src="https://github.com/user-attachments/assets/3bd107cb-b209-401a-bf9f-f177ebd19793">
 </p>
 
