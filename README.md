@@ -6,7 +6,12 @@
 
 Este projeto automatiza a ingestão, transformação e carga de dados da Temporada 2025 da Fórmula 1. Utilizando Airflow para orquestração, os dados são processados com armazenamento local em SQLite (podendo ser migrado para PostgreSQL).
 
-📊 Um dashboard interativo com **Streamlit + Plotly** apresenta insights visuais dos resultados das corridas e voltas mais rápidas.
+📊 Um dashboard interativo com **Streamlit + Plotly** apresenta insights visuais dos resultados das corridas e voltas mais rápidas, disponível apenas ao rodar projeto localmente.
+
+<p align="center"> 
+  <img src="https://github.com/user-attachments/assets/764200e5-0e5c-4db1-a5c2-7eda1581333f">
+  <img src="https://github.com/user-attachments/assets/3a102ebd-eba1-499a-87e0-a210ad5e2de2">
+</p>
 
 ---
 
