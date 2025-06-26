@@ -54,30 +54,30 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
 
 1. **Instalação**:
    ```bash
-  # Linux/Mac
-  source .venv/bin/activate
+    # Linux/Mac
+    source .venv/bin/activate
 
-  # Windows
-  .venv\Scripts\activate
+    # Windows
+    .venv\Scripts\activate
 
-  # Instalar dependências
-  pip install -r requirements.txt
+    # Instalar dependências
+    pip install -r requirements.txt
 
 
-  #(Manualmente) Coletar dados das corridas e voltas mais rápidas
-  python src/ingest_race_results.py
-  python src/scrape_fastest_laps.py
+    #(Manualmente) Coletar dados das corridas e voltas mais rápidas
+    python src/ingest_race_results.py
+    python src/scrape_fastest_laps.py
 
-  # Executar consultas SQL manualmente:Carregar no banco de dados SQLite + executar queries
-  python src/load_and_query_sqlite.py
+    # Executar consultas SQL manualmente:Carregar no banco de dados SQLite + executar queries
+    python src/load_and_query_sqlite.py
 
-  #  Utilizando o Apache Airflow com Docker + Docker Compose
+    #  Utilizando o Apache Airflow com Docker + Docker Compose
    
-  # Subir os containers do Airflow 
-  docker compose -f docker/airflow/docker-compose.yaml up -d
+    # Subir os containers do Airflow 
+    docker compose -f docker/airflow/docker-compose.yaml up -d
 
-  # Parar os containers 
-  docker compose -f docker/airflow/docker-compose.yaml down
+    # Parar os containers 
+    docker compose -f docker/airflow/docker-compose.yaml down
 
-  #Visualizar dados com Streamlit
-  python -m streamlit run f1_dashboard/f1_app.py
+    #Visualizar dados com Streamlit
+    python -m streamlit run f1_dashboard/f1_app.py
