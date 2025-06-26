@@ -63,7 +63,6 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
     # Instalar dependências
     pip install -r requirements.txt
 
-
     #(Manualmente) Coletar dados das corridas e voltas mais rápidas
     python src/ingest_race_results.py
     python src/scrape_fastest_laps.py
