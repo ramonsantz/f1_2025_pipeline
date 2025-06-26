@@ -4,9 +4,21 @@
   <img src="https://github.com/user-attachments/assets/6c9c24ac-46aa-469f-9ddc-a5d4cd1946af">
 </p>
 
-Este projeto automatiza a ingestão, transformação e carga de dados da Temporada 2025 da Fórmula 1. Utilizando Airflow para orquestração, os dados são processados e armazenados em SQLite/PostgreSQL para análise.
+Este projeto automatiza a ingestão, transformação e carga de dados da Temporada 2025 da Fórmula 1. Utilizando Airflow para orquestração, os dados são processados com armazenamento local em SQLite (podendo ser migrado para PostgreSQL).
 
-**Tecnologias**: Python, Airflow, SQLite/PostgreSQL, Web Scraping, SQL, Git, Pandas, Streamlit
+📊 Um dashboard interativo com **Streamlit + Plotly** apresenta insights visuais dos resultados das corridas e voltas mais rápidas.
+
+---
+
+## 🚀 Tecnologias e Ferramentas
+
+- **Python** (pandas, requests, BeautifulSoup)
+- **Airflow** (via Docker)
+- **SQLite** (ou PostgreSQL opcional)
+- **Streamlit** (visualização de dados)
+- **Papermill** (execução automática de notebooks)
+- **Plotly** (gráficos interativos)
+- **Git/GitHub** (controle de versão)
 
 ---
 
@@ -37,24 +49,30 @@ Este projeto automatiza a ingestão, transformação e carga de dados da Tempora
 
 1. **Instalação**:
    ```bash
-   source .venv/bin/activate  # Linux/Mac
-   .venv\Scripts\activate  # Windows
-   pip install -r requirements.txt
+  # Linux/Mac
+  source .venv/bin/activate
 
-   #Rodar Carga de Dados
-   python src/ingest_race_results.py
-   python src/scrape_fastest_laps.py
+  # Windows
+  .venv\Scripts\activate
 
-   # Executar consultas SQL manualmente:
-   python src/load_and_query_sqlite.py
+  # Instalar dependências
+  pip install -r requirements.txt
 
-   #  Utilizando o Apache Airflow com Docker + Docker Compose
+
+  #(Manualmente) Coletar dados das corridas e voltas mais rápidas
+  python src/ingest_race_results.py
+  python src/scrape_fastest_laps.py
+
+  # Executar consultas SQL manualmente:Carregar no banco de dados SQLite + executar queries
+  python src/load_and_query_sqlite.py
+
+  #  Utilizando o Apache Airflow com Docker + Docker Compose
    
-    # Subir os containers do Airflow com Docker Compose
-    docker compose -f docker/airflow/docker-compose.yaml up -d
+  # Subir os containers do Airflow 
+  docker compose -f docker/airflow/docker-compose.yaml up -d
 
-    # Parar os containers do Airflow
-    docker compose -f docker/airflow/docker-compose.yaml down
+  # Parar os containers 
+  docker compose -f docker/airflow/docker-compose.yaml down
 
-   #Visualizar dados com Streamlit
-   python -m streamlit run f1_dashboard/f1_app.py
+  #Visualizar dados com Streamlit
+  python -m streamlit run f1_dashboard/f1_app.py

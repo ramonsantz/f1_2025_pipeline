@@ -49,34 +49,69 @@ def show_fastest_laps():
     df_race.columns = df_race.columns.str.strip().str.lower()
     df_drivers.columns = df_drivers.columns.str.strip().str.lower()
 
-    # Evitar falhas em join
+    st.write("Pré-visualização de df_fast")
+    st.dataframe(df_fast.head(10))
+
+    # Padronizar nomes para join
     df_fast["grand_prix"] = df_fast["grand_prix"].astype(str).str.strip().str.title()
     df_race["track"] = df_race["track"].astype(str).str.strip().str.title()
-
-    # Manter corridas com dadosem ambas tabelas
-    valid_gps = set(df_fast["grand_prix"]).intersection(set(df_race["track"]))
-    df_fast = df_fast[df_fast["grand_prix"].isin(valid_gps)]
 
     if df_fast.empty:
         st.warning("Sem dados suficientes para exibir as voltas mais rápidas.")
         return
 
-    # Converte tempo
-    df_fast["time"] = pd.to_timedelta(df_fast["time"], errors="coerce")
-    df_fast = df_fast.dropna(subset=["time"])
+    # Função converter tempo string → timedelta
+    def parse_time_str(t):
+        try:
+            parts = t.strip().split(":")
+            if len(parts) == 2:
+                return pd.to_timedelta(f"00:{t}")
+            else:
+                return pd.NaT
+        except:
+            return pd.NaT
 
-    # Merge com nome dos pilotos
+    df_fast["time_timedelta"] = df_fast["time"].apply(parse_time_str)
+    df_fast = df_fast.dropna(subset=["time_timedelta"])
+
+    # Merges nomes dos pilotos
     df_fast = df_fast.merge(df_drivers, how="left", left_on="driver_id", right_on="id")
 
-    st.subheader("🚀 Melhor Volta por Corrida (Geral) [Somente GPs com dados completos]")
-    best_laps = df_fast.loc[df_fast.groupby("grand_prix")["time"].idxmin()]
-    fig3 = px.bar(best_laps, x="grand_prix", y="time", color="name", title="Melhor Volta em Cada GP")
+    # Manter GPs válidos em ambas tabelas
+    valid_gps = set(df_fast["grand_prix"]).intersection(set(df_race["track"]))
+    df_fast = df_fast[df_fast["grand_prix"].isin(valid_gps)]
+
+    # Melhor volta por GP
+    best_laps = df_fast.loc[df_fast.groupby("grand_prix")["time_timedelta"].idxmin()].copy()
+
+    # Formatando tempo em string m:ss.SSS
+    best_laps["tempo_formatado"] = best_laps["time_timedelta"].dt.components.apply(
+        lambda row: f"{int(row['minutes'])}:{row['seconds']:02d}.{int(row['milliseconds']):03d}", axis=1
+    )
+
+    st.subheader("🚀 Melhor Volta por Corrida (Geral)")
+    fig3 = px.bar(
+        best_laps,
+        x="grand_prix",
+        y="time_timedelta",
+        color="name",
+        text="tempo_formatado",
+        title="Melhor Volta em Cada GP"
+    )
+    fig3.update_traces(textposition='outside')
+    fig3.update_yaxes(title="Tempo (timedelta)")
     st.plotly_chart(fig3)
 
     st.subheader("🔥 Voltas Mais Rápidas por Piloto")
     count_fast = df_fast["driver_abbreviation"].value_counts().reset_index()
     count_fast.columns = ["driver_abbreviation", "voltas_mais_rapidas"]
-    fig4 = px.bar(count_fast, x="driver_abbreviation", y="voltas_mais_rapidas", title="Pilotos com Mais Voltas Rápidas")
+
+    fig4 = px.bar(
+        count_fast,
+        x="driver_abbreviation",
+        y="voltas_mais_rapidas",
+        title="Pilotos com Mais Voltas Rápidas"
+    )
     st.plotly_chart(fig4)
 
 def show_table_page(table_name):

@@ -8,7 +8,6 @@ cursor= conn.cursor()
 with open('sql/create_tables.sql', 'r') as f:
     cursor.executescript(f.read())
     
-#Load CSVs
 df_race = pd.read_csv('data/processed/race_results_2025_clean.csv')
 df_fast = pd.read_csv('data/processed/fastest_laps_2025_clean.csv')
 
@@ -20,7 +19,6 @@ drivers['id'] = range(1, len(drivers)+1)
 for _, row in drivers.iterrows():
     cursor.execute("INSERT INTO drivers (id, name) VALUES (?, ?)", (row['id'], row['name']))
 
-# Mapear driver_id nos DataFrames
 df_race = df_race.merge(drivers, how='left', left_on='driver', right_on='name')
 df_fast = df_fast.merge(drivers, how='left', left_on='driver', right_on='name')
 
@@ -47,16 +45,16 @@ for _, row in df_fast.iterrows():
         row['grand_prix'], row['id'], row['driver_abbreviation'], row['car'], row['time']
     ))
 
-# Finalizar
+
 conn.commit()
 
-# Abrir e rodar as consultas SQL do arquivo queries.sql
+# Abrir e rodar as consultas SQL 
 with open('sql/queries.sql', 'r') as f:
-    queries = f.read().split(';')  # Separar as consultas pelo ponto e vírgula
+    queries = f.read().split(';')  
 
 # Executar cada consulta e exibir os resultados
 for query in queries:
-    if query.strip():  # Verifica se a consulta não está vazia
+    if query.strip(): 
         cursor.execute(query)
         results = cursor.fetchall()
 
